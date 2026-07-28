@@ -1,0 +1,6 @@
+name1 = input("enter your name")
+lastname = input("enter your lastname")
+age = input("enter your age")
+city = input("enter your city")
+color = input("enter your color")
+print(f"your name is: {name1} your last name is: {lastname} your age is: {age} your city is: {city} your color is: {color}")
