@@ -1,0 +1,90 @@
+#1
+
+favorite_music = [
+    {
+        "title": "Rainimator – Just So You Know",
+        "url": "https://www.youtube.com/watch?v=AqbRM1MaZ34",
+    },
+    {
+        "title": "Queen – Bohemian Rhapsody",
+        "url": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ",
+    },
+    {
+        "title": "Ludovico Einaudi – Experience",
+        "url": "https://www.youtube.com/watch?v=hN_q-_nGv4U",
+    },
+    {
+        "title": "Hans Zimmer – Interstellar Main Theme",
+        "url": "https://www.youtube.com/watch?v=UDVtMYqUA4w",
+    },
+    {
+        "title": "Pink Floyd – Comfortably Numb",
+        "url": "https://www.youtube.com/watch?v=_FrOQC-zSZg",
+    },
+]
+
+# სიის დაბეჭდვა
+for index, track in enumerate(favorite_music, start=1):
+    print(f"{index}) {track['title']} - {track['url']}")
+
+#2
+
+favorite_cars = [
+    {
+        "model": "Porsche 911 GT3 RS",
+        "image_url": "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+        "model": "BMW M5 CS",
+        "image_url": "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+        "model": "Nissan GT-R R35",
+        "image_url": "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+        "model": "Audi RS6 Avant",
+        "image_url": "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+        "model": "Ford Mustang Shelby GT500",
+        "image_url": "https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?auto=format&fit=crop&w=800&q=80",
+    },
+]
+
+# დაულაგებელი სიის (Unordered List / Bullet points) დაბეჭდვა
+for car in favorite_cars:
+    print(f"• {car['model']}: {car['image_url']}")
+
+#3
+
+categories = {
+    "subjects": ["mathematics", "science", "literature"],
+    "programming languages": ["C", "Java", "Python", "Ruby", "Swift"],
+    "computer science concepts": [
+        "data structures",
+        "algorithms",
+        "operating systems",
+        "database management",
+        "networking",
+    ],
+    "web technologies": [
+        "HTML",
+        "CSS",
+        {"Javascript": ["react", "angular", "vue"]},
+        "bootstrap",
+    ],
+}
+
+for i, (category, items) in enumerate(categories.items(), 1):
+    print(f"{i}. {category}")
+    for j, item in enumerate(items, 1):
+        if isinstance(item, dict):
+            for sub_key, sub_items in item.items():
+                print(f"   {j}){sub_key}")
+                sub_list = " ".join(
+                    [f"{k}.{val}" for k, val in enumerate(sub_items, 1)]
+                )
+                print(f"      ({sub_list})")
+        else:
+            print(f"   {j}){item}")

@@ -1,0 +1,82 @@
+#1
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List Table</title>
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 5px;
+            border: 2px solid #000000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px 12px;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        td {
+            text-align: left;
+        }
+
+        /* ცენტრალურად გასწორება კონკრეტული სვეტებისთვის */
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Heading</th>
+                <th>Students</th>
+                <th colspan="3">Details</th>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Roll Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4" class="center-text">Student List</td>
+                <td class="center-text">1</td>
+                <td>Victor</td>
+                <td>Computer Science</td>
+                <td>12345</td>
+            </tr>
+            <tr>
+                <td class="center-text">2</td>
+                <td>Williams</td>
+                <td>Electronics</td>
+                <td>23456</td>
+            </tr>
+            <tr>
+                <td class="center-text">3</td>
+                <td>Harry</td>
+                <td>Electrical</td>
+                <td>34567</td>
+            </tr>
+            <tr>
+                <td class="center-text">4</td>
+                <td>Rick</td>
+                <td>Civil</td>
+                <td>45678</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
