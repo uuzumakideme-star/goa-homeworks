@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS დავალება - პორტფოლიო და რესტორანი</title>
+
+    <!-- 1. EXTERNAL CSS-ის სიმულაცია (ლინკი გარე ფაილზე) -->
+    <!-- რეალურ პროექტში გამოიყენება: <link rel="stylesheet" href="style.css"> -->
+
+    <!-- 2. INTERNAL CSS (შიდა სტილები <style> ტეგში) -->
+    <style>
+        /* ზოგადი გვერდის სტილები */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* სექციების სტილები */
+        section {
+            background-color: #ffffff;
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 28px;
+            border-bottom: 2px solid #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 22px;
+        }
+
+        /* დავალება 2: Internal სტილები განმარტებებისთვის */
+        .explanation-block {
+            border: 1px solid #cccccc;
+            background-color: #fafafa;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .code-example {
+            background-color: #eef2f5;
+            color: #c7254e;
+            padding: 5px 10px;
+            font-size: 14px;
+            border: 1px solid #d9d9d9;
+            display: inline-block;
+        }
+
+        /* დავალება 3: Internal CSS პერსონალური ვებსაიტისთვის */
+        .bio-card {
+            background-color: #e8f4f8;
+            border: 2px dashed #2980b9;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* დავალება 4: External CSS სტილები რესტორნის სექციისთვის */
+        .restaurant-title {
+            font-size: 32px;
+            color: #b71c1c;
+            background-color: #ffebee;
+            text-align: center;
+            border: 3px solid #b71c1c;
+            padding: 10px;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .dish-card {
+            font-size: 16px;
+            color: #263238;
+            background-color: #fff8e1;
+            text-align: center;
+            border: 2px solid #ffb300;
+            width: 280px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .dish-title {
+            font-size: 20px;
+            color: #d84315;
+            border-bottom: 1px solid #d84315;
+        }
+
+        .dish-price {
+            font-size: 18px;
+            color: #2e7d32;
+            background-color: #e8f5e9;
+            border: 1px solid #2e7d32;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        .dish-images img {
+            width: 120px;
+            height: 90px;
+            border: 1px solid #000;
+            margin: 5px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+         დავალება 2: CSS-ის ტიპების განმარტებები
+     -->
+    <section>
+        <h1>2. CSS-ის ტიპების განმარტება და მაგალითები</h1>
+
+        <div class="explanation-block">
+            <h2>Inline CSS (ჩაშენებული სტილი)</h2>
+            <p><strong>განმარტება:</strong> იწერება უშუალოდ HTML ელემენტის შიგნით <code>style</code> ატრიბუტის გამოყენებით. გამოიყენება კონკრეტული ელემენტისთვის სწრაფი სტილის მისანიჭებლად, თუმცა არ არის რეკომენდებული დიდი პროექტებისთვის, რადგან კოდს ტვირთავს.</p>
+            <h3>5 მაგალითი:</h3>
+            <ol>
+                <li>ტექსტის გაწითლება: <span style="color: red;">წითელი ტექსტი</span></li>
+                <li>ფონის შეცვლა: <span style="background-color: yellow;">ყვითელი ფონი</span></li>
+                <li>ფონტის ზომის გაზრდა: <span style="font-size: 20px;">დიდი ტექსტი</span></li>
+                <li>ტექსტის ცენტრალიზაცია: <div style="text-align: center;">ცენტრში განთავსებული</div></li>
+                <li>ჩარჩოს დამატება: <span style="border: 1px solid black; padding: 2px;">ჩარჩოიანი ტექსტი</span></li>
+            </ol>
+        </div>
+
+        <div class="explanation-block">
+            <h2>Internal CSS (შიდა სტილი)</h2>
+            <p><strong>განმარტება:</strong> იწერება HTML დოკუმენტის <code>&lt;head&gt;</code> სექციაში, <code>&lt;style&gt;</code> ტეგებს შორის. გამოიყენება მაშინ, როდესაც სტილები ეხება მხოლოდ ერთ კონკრეტულ HTML გვერდს.</p>
+            <h3>5 მაგალითი (კოდის სახით):</h3>
+            <ul>
+                <li><code class="code-example">p { color: blue; }</code> - ყველა პარაგრაფს აფერადებს ლურჯად.</li>
+                <li><code class="code-example">h1 { font-size: 24px; }</code> - H1 სათაურის ზომის მითითება.</li>
+                <li><code class="code-example">body { background-color: #f0f0f0; }</code> - მთელი გვერდის ფონის შეცვლა.</li>
+                <li><code class="code-example">.text-center { text-align: center; }</code> - ტექსტის ცენტრში გასწორება კლასით.</li>
+                <li><code class="code-example">div { border: 2px solid green; }</code> - DIV ელემენტებზე მწვანე ჩარჩოს დადება.</li>
+            </ul>
+        </div>
+
+        <div class="explanation-block">
+            <h2>External CSS (გარე სტილი)</h2>
+            <p><strong>განმარტება:</strong> CSS კოდი ინახება ცალკე ფაილში (მაგ: <code>style.css</code>) და HTML დოკუმენტს უკავშირდება <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> ტეგით. ეს არის საუკეთესო პრაქტიკა, რადგან ერთი ფაილით შესაძლებელია მრავალი HTML გვერდის გასტილვა.</p>
+            <h3>5 მაგალითი (CSS ფაილის ჩანაწერები):</h3>
+            <ul>
+                <li><code class="code-example">.button { background-color: blue; color: white; }</code> - ღილაკის სტილი.</li>
+                <li><code class="code-example">.container { border: 1px solid #000; text-align: left; }</code> - კონტეინერის ჩარჩო და ტექსტი.</li>
+                <li><code class="code-example">h2 { font-size: 18px; color: #333; }</code> - ქვესათაურების უნივერსალური სტილი.</li>
+                <li><code class="code-example">.card { background-color: #fff; border: 1px solid red; }</code> - ბარათის გასტილვა.</li>
+                <li><code class="code-example">footer { text-align: center; font-size: 12px; }</code> - ფუტერის გასწორება და ზომა.</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- 
+         დავალება 3: ვებსაიტი ჩემ შესახებ (3 CSS-ით)
+     -->
+    <section>
+        <!-- External CSS-ის კლასი გამოყენებულია სათაურზე -->
+        <h1 class="restaurant-title" style="background-color: #e3f2fd; color: #0d47a1; border-color: #0d47a1;">3. ვებსაიტი ჩემ შესახებ</h1>
+
+        <!-- Internal CSS-ის კლასი (bio-card) -->
+        <div class="bio-card">
+            <h2>გიორგი გიორგაძე</h2>
+            
+            <!-- Inline CSS გამოყენება -->
+            <p style="font-size: 18px; color: #1565c0; font-weight: bold;">
+                ვებ-დეველოპერი / სტუდენტი
+            </p>
+
+            <p style="text-align: justify; border: 1px solid #90caf9; background-color: #ffffff; padding: 10px;">
+                გამარჯობა! მე ვარ დაინტერესებული ვებ-ტექნოლოგიებით. ახლა ვსწავლობ HTML-სა და CSS-ს, რათა შევქმნა თანამედროვე, დახვეწილი და ფუნქციური ვებსაიტები.
+            </p>
+
+            <h3>ჩემი უნარები:</h3>
+            <!-- Inline CSS სიის ელემენტებზე -->
+            <ul style="text-align: left; background-color: #ffffff; border: 1px solid #bbdefb; padding: 15px 30px;">
+                <li style="color: #2e7d32; font-size: 16px;">HTML5 სტრუქტურა</li>
+                <li style="color: #1565c0; font-size: 16px;">CSS3 გასტილვა (Inline, Internal, External)</li>
+                <li style="color: #ef6c00; font-size: 16px;">Responsive დიზაინის საფუძვლები</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!--
+         დავალება 4: რესტორნის ვებსაიტი
+         (გამოყენებულია External CSS-ის კლასები)
+         მოთხოვნილი თვისებები: font-size, color, background-color, text-align, border
+          -->
+    <section>
+        <h1 class="restaurant-title">4. რესტორანი "ქართული გემო"</h1>
+        <p style="text-align: center; font-size: 16px;">გთავაზობთ ტრადიციულ ქართულ კერძებს საუკეთესო ხარისხით!</p>
+
+        <div class="menu-container">
+            
+            <!-- კერძი 1 -->
+            <div class="dish-card">
+                <h3 class="dish-title">ხინკალი</h3>
+                <p>ტრადიციული მთიულური ხინკალი წვნიანი ხორცითა და სუნელებით.</p>
+                <div class="dish-images">
+                    <img src="https://via.placeholder.com/120x90?text=Khinkali+1" alt="ხინკალი 1">
+                    <img src="https://via.placeholder.com/120x90?text=Khinkali+2" alt="ხინკალი 2">
+                </div>
+                <div class="dish-price">ფასი: 1.50 ₾ (1 ცალი)</div>
+            </div>
+
+            <!-- კერძი 2 -->
+            <div class="dish-card">
+                <h3 class="dish-title">აჭარული ხაჭაპური</h3>
+                <p>ნავის ფორმის ცომი, სულგუნი, კარაქი და კვერცხის გული.</p>
+                <div class="dish-images">
+                    <img src="https://via.placeholder.com/120x90?text=Khachapuri+1" alt="ხაჭაპური 1">
+                    <img src="https://via.placeholder.com/120x90?text=Khachapuri+2" alt="ხაჭაპური 2">
+                </div>
+                <div class="dish-price">ფასი: 15.00 ₾</div>
+            </div>
+
+            <!-- კერძი 3 -->
+            <div class="dish-card">
+                <h3 class="dish-title">მწვადი ღორის</h3>
+                <p>მწვადად შემწვარი ნაზი ღორის ხორცი ხახვითა და ბროწეულით.</p>
+                <div class="dish-images">
+                    <img src="https://via.placeholder.com/120x90?text=Mtsvadi+1" alt="მწვადი 1">
+                    <img src="https://via.placeholder.com/120x90?text=Mtsvadi+2" alt="მწვადი 2">
+                </div>
+                <div class="dish-price">ფასი: 20.00 ₾</div>
+            </div>
+
+            <!-- კერძი 4 -->
+            <div class="dish-card">
+                <h3 class="dish-title">შქმერული</h3>
+                <p>შემწვარი ქათამი ნიორ-რძიან სოუსში, მიწის ჭურჭელში მომზადებული.</p>
+                <div class="dish-images">
+                    <img src="https://via.placeholder.com/120x90?text=Shkmeruli+1" alt="შქმერული 1">
+                    <img src="https://via.placeholder.com/120x90?text=Shkmeruli+2" alt="შქმერული 2">
+                </div>
+                <div class="dish-price">ფასი: 25.00 ₾</div>
+            </div>
+
+            <!-- კერძი 5 -->
+            <div class="dish-card">
+                <h3 class="dish-title">ფხალის ასორტი</h3>
+                <p>ისპანახის, ჭარხლისა და მწვანე ლობიოს ფხალი ნიგვზითა და სუნელებით.</p>
+                <div class="dish-images">
+                    <img src="https://via.placeholder.com/120x90?text=Pkhali+1" alt="ფხალი 1">
+                    <img src="https://via.placeholder.com/120x90?text=Pkhali+2" alt="ფხალი 2">
+                </div>
+                <div class="dish-price">ფასი: 18.00 ₾</div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

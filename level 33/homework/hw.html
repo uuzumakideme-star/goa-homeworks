@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Luxury Hotels - საუკეთესო სასტუმროები საქართველოში</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        /* CSS Reset და ძირითადი პარამეტრები */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        /* ჰედერის სტილები */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #d1d8e0;
+            font-weight: 300;
+        }
+
+        /* მთავარი კონტეინერი */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1e3c72;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #f39c12;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* სასტუმროების ბადე (Grid Layout) */
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* სასტუმროს ბარათის სტილი */
+        .hotel-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ფოტოს კონტეინერი */
+        .hotel-image-box {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .hotel-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .hotel-card:hover .hotel-image-box img {
+            transform: scale(1.08);
+        }
+
+        /* რეიტინგის ბეჯი ფოტოზე */
+        .rating-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(30, 60, 114, 0.9);
+            color: #f1c40f;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        /* ბარათის შიგთავსი */
+        .hotel-info {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .hotel-name {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .hotel-description {
+            font-size: 0.95rem;
+            color: #636e72;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* ფასის და ღილაკის ქვედა ბლოკი */
+        .hotel-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #edf2f7;
+            padding-top: 15px;
+            margin-top: auto;
+        }
+
+        .hotel-price {
+            font-size: 1.25rem;
+            color: #27ae60;
+            font-weight: 700;
+        }
+
+        .hotel-price span {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            font-weight: 400;
+        }
+
+        .btn-book {
+            background-color: #1e3c72;
+            color: #ffffff;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-book:hover {
+            background-color: #f39c12;
+        }
+
+        /* ფუტერი */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #1a252f;
+            color: #a4b0be;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ჰედერი -->
+    <header>
+        <h1>Grand Luxury Hotels</h1>
+        <p>დაისვენეთ საუკეთესო გარემოში — აღმოაჩინეთ გამორჩეული სასტუმროები</p>
+    </header>
+
+    <!-- მთავარი კონტენტი -->
+    <div class="container">
+        <h2 class="section-title">რეკომენდებული სასტუმროები</h2>
+
+        <div class="hotel-grid">
+
+            <!-- სასტუმრო 1 -->
+            <div class="hotel-card">
+                <div class="hotel-image-box">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600" alt="Rooms Hotel Kazbegi">
+                    <div class="rating-badge">★ 4.9 / 5</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">Rooms Hotel Kazbegi</h3>
+                    <p class="hotel-description">თანამედროვე სასტუმრო ყაზბეგში, საიდანაც იშლება მყინვარწვერისა და გერგეთის სამების ულამაზესი ხედები.</p>
+                    <div class="hotel-footer">
+                        <div class="hotel-price">350 ₾ <span>/ ღამე</span></div>
+                        <button class="btn-book">დაჯავშნა</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- სასტუმრო 2 -->
+            <div class="hotel-card">
+                <div class="hotel-image-box">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600" alt="Radisson Blu Batumi">
+                    <div class="rating-badge">★ 4.8 / 5</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">Radisson Blu Batumi</h3>
+                    <p class="hotel-description">ზღვის პირველ ზოლში მდებარე პრემიუმ კლასის სასტუმრო ღია და დახურული აუზებითა და სპა ცენტრით.</p>
+                    <div class="hotel-footer">
+                        <div class="hotel-price">420 ₾ <span>/ ღამე</span></div>
+                        <button class="btn-book">დაჯავშნა</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- სასტუმრო 3 -->
+            <div class="hotel-card">
+                <div class="hotel-image-box">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600" alt="Stamba Hotel Tbilisi">
+                    <div class="rating-badge">★ 4.9 / 5</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">Stamba Hotel Tbilisi</h3>
+                    <p class="hotel-description">ისტორიულ სტამბის შენობაში განთავსებული უნიკალური ინდუსტრიული დიზაინის სასტუმრო თბილისის ცენტრში.</p>
+                    <div class="hotel-footer">
+                        <div class="hotel-price">500 ₾ <span>/ ღამე</span></div>
+                        <button class="btn-book">დაჯავშნა</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- სასტუმრო 4 -->
+            <div class="hotel-card">
+                <div class="hotel-image-box">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600" alt="Lopota Spa Resort">
+                    <div class="rating-badge">★ 4.7 / 5</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">Lopota Spa Resort</h3>
+                    <p class="hotel-description">კახეთში, ტბის გარშემო გაშენებული მშვიდი და მდიდრული რიზორტი ოჯახური დასვენებისა და განტვირთვისთვის.</p>
+                    <div class="hotel-footer">
+                        <div class="hotel-price">380 ₾ <span>/ ღამე</span></div>
+                        <button class="btn-book">დაჯავშნა</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- სასტუმრო 5 -->
+            <div class="hotel-card">
+                <div class="hotel-image-box">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600" alt="Borjomi Likani Health Spa">
+                    <div class="rating-badge">★ 4.6 / 5</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">Borjomi Likani Spa</h3>
+                    <p class="hotel-description">წიწვოვანი ტყით გარშემორტყმული გამაჯანსაღებელი კომპლექსი, ცნობილი სამკურნალო პროცედურებითა და მინერალური წყლებით.</p>
+                    <div class="hotel-footer">
+                        <div class="hotel-price">310 ₾ <span>/ ღამე</span></div>
+                        <button class="btn-book">დაჯავშნა</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ფუტერი -->
+    <footer>
+        <p>&copy; 2026 Grand Luxury Hotels. ყველა უფლება დაცულია.</p>
+    </footer>
+
+</body>
+</html>

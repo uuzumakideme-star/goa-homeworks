@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მოგზაურობა საქართველოში</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        /* ზოგადი სტილები */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* ჰედერი */
+        header {
+            background-color: #1b4332;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 5px solid #d8f3dc;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #b7e4c7;
+        }
+
+        /* კონტეინერი */
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* სათაურები */
+        h2 {
+            color: #2d6a4f;
+            border-left: 5px solid #52b788;
+            padding-left: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        /* სურათების გალერეა (Flexbox) */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 30%;
+            min-width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-color: #52b788;
+        }
+
+        /* ვიდეოების სექცია */
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        iframe, video {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        /* სიების სექცია */
+        .lists-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 20px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .list-box {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        ul li::marker {
+            color: #52b788;
+        }
+
+        ol li::marker {
+            color: #1b4332;
+            font-weight: bold;
+        }
+
+        /* ცხრილი */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2d6a4f;
+            color: #ffffff;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e8f5e9;
+        }
+
+        /* ფუტერი */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #081c15;
+            color: #ffffff;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ჰედერი -->
+    <header>
+        <h1>აღმოაჩინე საქართველო</h1>
+        <p>მთებისა და უძველესი კულტურის ქვეყანა</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- შესავალი -->
+        <section>
+            <h2>საქართველოს შესახებ</h2>
+            <p>საქართველო გამოირჩევა ულამაზესი ბუნებით, მდიდარი ისტორიითა და სტუმართმოყვარეობით. აქ შეგიძლიათ ეწვიოთ როგორც კავკასიონის მწვერვალებს, ასევე შავი ზღვის სანაპიროს.</p>
+        </section>
+
+        <!-- 5 სურათის გალერეა -->
+        <section>
+            <h2>გალერეა (5 სურათი)</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=500" alt="თბილისი">
+                <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=500" alt="ყაზბეგი">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500" alt="სვანეთი">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500" alt="ბათუმი">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500" alt="სიღნაღი">
+            </div>
+        </section>
+
+        <!-- 2 ვიდეო -->
+        <section>
+            <h2>ვიდეო მიმოხილვა (2 ვიდეო)</h2>
+            <div class="video-container">
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="საქართველოს ბუნება" allowfullscreen></iframe>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="ქართული სამზარეულო" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2 სია (ul და ol) -->
+        <section>
+            <h2>მოგზაურის გზამკვლევი</h2>
+            <div class="lists-section">
+                <!-- დაულაგებელი სია (ul) -->
+                <div class="list-box">
+                    <h3>რა უნდა დააგემოვნოთ (ul)</h3>
+                    <ul>
+                        <li>ხინკალი</li>
+                        <li>აჭარული ხაჭაპური</li>
+                        <li>მწვადი და ტყემალი</li>
+                        <li>ქართული ღვინო</li>
+                        <li>ჩურჩხელა</li>
+                    </ul>
+                </div>
+
+                <!-- დალაგებული სია (ol) -->
+                <div class="list-box">
+                    <h3>მოგზაურობის ნაბიჯები (ol)</h3>
+                    <ol>
+                        <li>აირჩიეთ სასურველი რეგიონი</li>
+                        <li>დაჯავშნეთ სასტუმრო</li>
+                        <li>მოამზადეთ ბარგის სია</li>
+                        <li>შეადგინეთ მარშრუტი</li>
+                        <li>ისიამოვნეთ მოგზაურობით</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1 ცხრილი -->
+        <section>
+            <h2>პოპულარული მიმართულებები</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>კუთხე</th>
+                        <th>მთავარი ქალაქი / დაბა</th>
+                        <th>საუკეთესო სეზონი</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>სვანეთი</td>
+                        <td>მესტია</td>
+                        <td>ზაფხული / ზამთარი</td>
+                    </tr>
+                    <tr>
+                        <td>აჭარა</td>
+                        <td>ბათუმი</td>
+                        <td>ზაფხული</td>
+                    </tr>
+                    <tr>
+                        <td>კახეთი</td>
+                        <td>თელავი / სიღნაღი</td>
+                        <td>შემოდგომა (რ Plis)</td>
+                    </tr>
+                    <tr>
+                        <td>ყაზბეგი</td>
+                        <td>სტეფანწმინდა</td>
+                        <td>გაზაფხული / ზაფხული</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <!-- ფუტერი -->
+    <footer>
+        <p>&copy; 2026 სასწავლო ვებ-პროექტი | ყველა უფლება დაცულია.</p>
+    </footer>
+
+</body>
+</html>
