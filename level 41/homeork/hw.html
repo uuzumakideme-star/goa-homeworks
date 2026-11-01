@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Lists Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* 1. დალაგებული სიის (ol) სტილი */
+        ol {
+            /* ვცვლით მარკერს რომაული დიდი ციფრებით */
+            list-style-type: upper-roman;
+            
+            /* ვუწერთ inside პოზიციას (მარკერი ტექსტის შიგნით, ერთ ხაზზე ექცევა) */
+            list-style-position: inside;
+            
+            background-color: #f9f9f9;
+            padding: 15px;
+            width: 300px;
+            border-radius: 5px;
+        }
+
+        /* 2. დაულაგებელი სიის (ul) სტილი */
+        ul {
+            /* Flaticon-იდან აღებული აიქონის ბმული მარკერის (list-style-image) სახით */
+            list-style-image: url('https://cdn-icons-png.flaticon.com/16/1828/1828640.png');
+            
+            background-color: #f9f9f9;
+            padding: 15px 15px 15px 30px; /* რომ აიქონი კარგად გამოჩნდეს */
+            width: 300px;
+            border-radius: 5px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>დალაგებული სია (Ordered List)</h2>
+    <ol>
+        <li>პირველი პუნქტი</li>
+        <li>მეორე პუნქტი</li>
+        <li>მესამე პუნქტი</li>
+    </ol>
+
+    <h2>დაულაგებელი სია (Unordered List - Flaticon მარკერით)</h2>
+    <ul>
+        <li>ვაშლი</li>
+        <li>ბანანი</li>
+        <li>ფორთოხალი</li>
+    </ul>
+
+</body>
+</html>

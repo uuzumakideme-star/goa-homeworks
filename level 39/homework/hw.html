@@ -1,0 +1,114 @@
+<!-- 1 -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>A Tegis Psevdoselektorebi</title>
+    <style>
+        /* 
+          რა არის ფსევდოსელექტორი: 
+          ფსევდოსელექტორი არის CSS-ის ინსტრუმენტი, რომელიც ირჩევს ელემენტს 
+          მისი კონკრეტული მდგომარეობის ან სტრუქტურის მიხედვით.
+        */
+
+        /* a:link - აარჩევს ბმულს, რომელზეც ჯერ არ გადასულა მომხმარებელი (მოუნახულებელი) */
+        a:link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* a:visited - აარჩევს ბმულს, რომელიც უკვე მონახულებული აქვს მომხმარებელს */
+        a:visited {
+            color: #660066;
+        }
+
+        /* a:hover - აარჩევს ბმულს, როდესაც მასზე მაუსის კურსორია მიტანილი */
+        a:hover {
+            color: #ff3300;
+            text-decoration: underline;
+        }
+
+        /* a:active - აარჩევს ბმულს იმ მომენტში, როდესაც მასზე კლიკს აკეთებენ (თითის მიჭერისას) */
+        a:active {
+            color: #009900;
+        }
+    </style>
+</head>
+<body>
+
+    <p>გთხოვთ ეწვიოთ ამ ბმულს: <a href="https://www.example.com">მაგალითის ბმული</a></p>
+
+</body>
+</html>
+
+
+<!-- 2 -->
+
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Styled Table with nth-child and hover</title>
+    <style>
+        /* ცხრილის ძირითადი სტილი */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ცხრილის თავსაბურავი (Header) მწვანე ფონით */
+        th {
+            background-color: #04AA6D;
+            color: white;
+            text-align: left;
+            padding: 12px;
+        }
+
+        /* ცხრილის უჯრები */
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* nth-child(even) - ირჩევს ლუწ მწკრივებს და აძლევს ღია ნაცრისფერ ფონს */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* hover - მწკრივზე მაუსის მიტანისას ცვლის ფონს უკეთესი ვიზუალისთვის */
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+            <td>$150</td>
+        </tr>
+        <tr>
+            <td>Joe</td>
+            <td>Swanson</td>
+            <td>$300</td>
+        </tr>
+    </table>
+
+</body>
+</html>

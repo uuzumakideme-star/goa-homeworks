@@ -1,0 +1,13 @@
+/* დაულაგებელი სია - Flaticon-ის იკონით */
+.tools-list {
+  list-style-image: url('https://cdn-icons-png.flaticon.com/512/5290/5290058.png');
+  list-style-position: inside;
+  padding-left: 10px;
+}
+
+/* დალაგებული სია */
+.steps-list {
+  list-style-type: upper-roman; 
+  list-style-position: inside; 
+  padding-left: 10px;
+}
