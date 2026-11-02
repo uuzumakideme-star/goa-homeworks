@@ -1,0 +1,85 @@
+/* საერთო სტილები და ცენტრირება */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* მთავარი კონტეინერი */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ტექსტის სტილი (LOADING ..) */
+.loading-text {
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+/* "LOAD" ნაწილი - ყვითელი/ოქროსფერი */
+.load-word {
+    color: #e0b83b;
+}
+
+/* "ING" და წერტილები - მუქი ნაცრისფერი */
+.dots {
+    color: #4a4a4a;
+}
+
+/* წერტილების ციმციმის ანიმაცია */
+.dot-one {
+    animation: blink 1.5s infinite steps(1, start);
+    animation-delay: 0s;
+}
+
+.dot-two {
+    animation: blink 1.5s infinite steps(1, start);
+    animation-delay: 0.5s;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 0; }
+    50.1%, 100% { opacity: 1; }
+}
+
+/* პროგრეს ბარის გარსაცმი (ჩარჩო) */
+.progress-bar {
+    width: 260px;
+    height: 10px;
+    border: 2px solid #b8c467;
+    border-radius: 6px;
+    background-color: #fffbdf;
+    overflow: hidden;
+    padding: 1px;
+}
+
+/* ივსება ზოლი (მწვანე ნაწილი, რომელიც მოძრაობს) */
+.progress-fill {
+    width: 40%;
+    height: 100%;
+    background-color: #8cc63f;
+    border-radius: 4px;
+    animation: loadProgress 2s infinite ease-in-out;
+}
+
+/* პროგრეს ბარის ანიმაცია */
+@keyframes loadProgress {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(120%);
+    }
+    100% {
+        transform: translateX(250%);
+    }
+}

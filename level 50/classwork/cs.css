@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#parent {
+    width: 300px;
+    height: 300px;
+    background-color: peru;
+    display: flex;
+    animation-name: rainbow;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes rainbow {
+    0% {
+        background-color: green;
+        transform: rotate(0deg);
+    }
+
+    10% {
+        background-color: navy;
+    }
+
+    20% {
+        background-color: red;
+    }
+
+    30% {
+        background-color: goldenrod;
+    }
+
+    40% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: brown;
+    }
+
+    60% {
+        background-color: rgb(43, 226, 162);
+    }
+
+    70% {
+        background-color: crimson;
+    }
+
+    80% {
+        background-color: darkkhaki;
+    }
+
+    90% {
+        background-color: rgb(79, 70, 47);
+    }
+
+    100% {
+        background-color: green;
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,11 @@
+.banner {
+    width: 800px;
+    height: 400px;
+    background-image: url("image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+}

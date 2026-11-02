@@ -1,0 +1,22 @@
+<!-- 1 -->
+ def number(bus_stops):
+    return sum(on - off for on, off in bus_stops)
+
+<!-- 2 -->
+import re
+
+def reverse_words(text):
+    # Split by spaces, keeping the spaces in the resulting list, then reverse each word/space block
+    parts = re.split(r'(\s+)', text)
+    return ''.join(part[::-1] for part in parts)
+
+<!-- 3 -->
+ def remove_smallest(numbers):
+    if not numbers:
+        return []
+    
+    # Find the index of the first occurrence of the minimum element
+    min_index = numbers.index(min(numbers))
+    
+    # Return a new list excluding that element without mutating the original
+    return numbers[:min_index] + numbers[min_index + 1:]

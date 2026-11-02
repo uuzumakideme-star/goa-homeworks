@@ -1,0 +1,167 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* 1. Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background: lightblue;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* 2. Navigation Bar */
+
+.navbar {
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+/* 3. Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 4. Profile Card */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.profile img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+/* 5. Hero Section */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 30px;
+}
+
+.hero img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero img {
+        width: 40%;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        background: purple;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile h2 {
+        font-size: 20px;
+    }
+
+    .profile p {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+}
