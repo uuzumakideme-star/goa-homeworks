@@ -1,0 +1,13 @@
+.ball {
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    background-color: black;
+    animation: bombo 1s infinite;
+}
+
+@keyframes bombo {
+    100%{
+        transform: rotate(360deg);
+    }
+}
